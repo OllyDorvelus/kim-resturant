@@ -1,3 +1,96 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$primary-cl: #4169e1;
+$secondary-cl: #FFD700;
+
+
+nav {
+   height: 100px;
+   width: 100%;
+   padding:0px;
+   background-color: #fff;
+}
+
+.navigation {
+  list-style:none;
+  color: $primary-cl;
+  font-size:1.7em;
+  
+  li {
+    padding: 5px;
+    display: inline;
+  }
+  
+  a {
+    color: $primary-cl;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: $secondary-cl;
+  }
+  
+  .right {
+    float:right;
+    padding-top: 50px;
+  }
+  
+  .left {
+    display:inline;
+  }
+  
+  img {
+    width: 14%;
+    height:100px;
+  }
+}
+
+.jumbo1 {
+  background-image: asset_url('logo.jpeg');
+  background-size: cover;
+  height: 530px;
+}
+
+.jumbo2 {
+  background-image: asset_url("island");
+  background-size: cover;
+  height:530px;
+}
+
+.resturant-title {
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 0.35px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 500px) { 
+  li {
+    display: block !important;
+  }
+  
+  nav {
+    height: 300px;
+  }
+  
+  .right {
+    float: none !important;
+    padding-top: 20px !important;
+  }
+  
+  .left > img {
+    width: 35% !important;
+  }
+
+}
+
+@media screen and (max-width: 720px) { 
+  .left > img {
+    width: 20% !important;
+  }
+  
+}
+  
 

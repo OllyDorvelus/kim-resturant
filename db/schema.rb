@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313192153) do
+ActiveRecord::Schema.define(version: 20180314063437) do
 
   create_table "food_types", force: :cascade do |t|
-    t.integer  "user_id"
     t.integer  "food_id"
+    t.integer  "type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180313192153) do
     t.boolean  "special",     default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture"
   end
 
   create_table "types", force: :cascade do |t|
