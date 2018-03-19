@@ -3,12 +3,16 @@
 $primary-cl: #4169e1;
 $secondary-cl: #FFD700;
 
+body {
+  color:$primary-cl;
+}
 
 nav {
    height: 100px;
    width: 100%;
    padding:0px;
    background-color: #fff;
+   z-index: 100;
 }
 
 .navigation {
@@ -45,10 +49,50 @@ nav {
   }
 }
 
+ // MENU NAV
+
+.menu-nav {
+  .menu-navigation {
+    list-style:none;
+    font-size: 1.9em;
+    background-color: $secondary-cl;
+    height:45px;
+  }
+  
+  li {
+    display:inline;
+    padding-left: 150px;
+  }
+  
+  a {
+    color:$primary-cl;
+  }
+  
+  a:hover {
+    opacity: 0.6;
+    text-decoration:none;
+    background-color: $secondary-cl;
+  }
+  
+}
+
 .jumbo1 {
   background-image: asset_url('logo.jpeg');
   background-size: cover;
   height: 530px;
+  color: $secondary-cl;
+  
+  p {
+    letter-spacing: -0.25px;
+    font-weight: 600;
+    padding-top: 10px;
+  }
+}
+.resturant-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $secondary-cl !important;
+  letter-spacing: 0.35px;
 }
 
 .jumbo2 {
@@ -57,11 +101,93 @@ nav {
   height:530px;
 }
 
-.resturant-title {
-  font-weight: 700;
-  color: #fff !important;
-  letter-spacing: 0.35px;
+.jumbo3 {
+  background-image: asset_url("carnival");
+  background-size: cover;
+  height: 530px;
 }
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: $secondary-cl !important;
+    /*background: rgba(0, 0, 0, 0.5) !important;*/
+    border-radius:10px;
+    color:$primary-cl !important;
+}
+
+.btn-primary:hover {
+ opacity: 0.7;
+}
+
+.menu-food-img {
+  height: 350px;
+  width: 92%;
+  margin-left: 10px;
+}
+
+.food-img-container {
+  position:relative;
+  
+  .description {
+    position: absolute;
+    //bottom: 60px;
+    //  right: 200px;     background-color: black;
+    //     color: white;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing:0.3px;
+    font-size: 16px;
+    filter: brightness(200%);
+    color: $primary-cl;
+    // padding-left: 20px;
+    //   padding-right: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .price {
+    position: absolute;
+    //bottom: 60px;
+    //  right: 200px;     background-color: black;
+    //     color: white;
+   // font-size: 16px;
+    font-weight: 900;
+    letter-spacing:0.3px;
+    font-size: 16px;
+    filter: brightness(200%);
+    color: $primary-cl;
+    // padding-left: 20px;
+    //   padding-right: 20px;
+    top: 90%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+  
+}
+
+#food-container {
+  background-color: $secondary-cl;
+}
+
+.resturant-img {
+  width: 75%;
+  height:500px;
+}
+
+.address {
+  ul {
+    list-style:none;
+    font-size:14px;
+    display:inline;
+  }
+}
+
+.inline {
+  display:inline;
+}
+  
+
+
 
 
 /* MEDIA QUERIES */
@@ -72,7 +198,7 @@ nav {
   }
   
   nav {
-    height: 300px;
+    height: 360px;
   }
   
   .right {

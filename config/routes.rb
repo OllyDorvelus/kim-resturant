@@ -5,10 +5,14 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'welcome#index'
+   get 'location', to: 'welcome#location', as: 'location'
+   get 'story', to: 'welcome#story', as: 'story'
   
    get 'login', to: 'sessions#new'
    post 'login', to: 'sessions#create'
    delete 'logout', to: 'sessions#destroy'
+   get 'menu', to: 'foods#menu'
+   get 'menu/:name', to: 'types#main', as: 'main_type'
   
    resources :foods
    

@@ -1,13 +1,14 @@
 <nav>
 <ul class="navigation">
   <div class="left">
-    <%= image_tag "royal_logo2", style:"padding-bottom:8px" %>
+    <%=link_to(image_tag("royal_logo2", style:"padding-bottom:8px"), root_path) %>
   </div>
   <div class="right">
-  <li><a href="#">Menu</a></li>
-  <li><a href="#">Our Story</a></li>
+  <li><%= link_to "Menu", menu_path %></li>
+  <li><%= link_to "Our Story", story_path %></li>
   <li><a href="#">Specials</a></li>
-  <li><a href="#">Location</a></li>
+  <li><%= link_to "Locaiton", location_path %></li>
+  <li><a href="#">Catering</a></li>
   </div>
 </ul>
 </nav>
